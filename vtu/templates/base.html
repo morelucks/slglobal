@@ -53,8 +53,6 @@ body, html {
 
     {% endblock  %}</h3>
 
-git 
-
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
@@ -99,19 +97,3 @@ function w3_close() {
 
 </body>
 </html>
-
-    <div class="col-4 offset-4">
-        {% if user.is_authenticated%}
-             <h1>Welcome to Crmanager</h1>
-        {% else %}
-        <h1>Login</h1>
-        <form action='{% url "home" %}' method='post'>
-            {% csrf_token %}        
-            <input type='text' class="form-control" name="username" placeholder="username" Required/><br>
-            <input type='password' class="form-control" name="password" placeholder="password" Required/><br>
-            <button type="submit" class="btn btn-secondary">Login</button>
-        </form>
-        {% endif %}
-
-        
-    </div>
